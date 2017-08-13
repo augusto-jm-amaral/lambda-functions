@@ -1,0 +1,22 @@
+service: lambda-github-api
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+
+functions:
+  users:
+    handler: index.users
+    events:
+     - http:
+         path: users
+         method: get
+     - http:
+         path: users
+         method: post
+     - http:
+         path: users
+         method: put
+     - http:
+         path: users
+         method: delete
